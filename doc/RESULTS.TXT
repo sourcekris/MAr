@@ -1,0 +1,4 @@
+stand.txt:
+TT1             696453 mar + lzh
+TT2             525655 mar + bwt
+TT3             528800 mar + ppm
