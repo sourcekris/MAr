@@ -84,7 +84,7 @@ Usage by command:
     prediction). The higher, the better the compression ratio but also the more
     memory you will need.
 
-  - "-t [<delta>]" (0 to 4, default = 0, no delta)
+  - `-t [<delta>]` (0 to 4, default = 0, no delta)
 
     Selects the delta encoding distance. If delta if different from 0, delta
     encoding is performed in a byte per byte basis (no carry). This can be
@@ -96,7 +96,7 @@ Usage by command:
     - use 3 for 24-bit true color pictures
     - use 4 for 16-bit stereo sound and 32-bit true color pictures (with alpha)
 
-    "-t 4" may also help compressing structured data files containing integers
+    `-t 4` may also help compressing structured data files containing integers
            or floating point numbers tables.
 
 * (A)dd archive
