@@ -46,11 +46,13 @@ Usage
 
 General MAr usage is:
 
+```
 mar [<options>] <command> <archive> [<files>]
     <option>  = -a <algorithm> | -o <order> | -t [<delta>] | -v [<level>]
     <command> = (a)dd | (c)reate | (d)elete | (l)ist | (t)est | e(x)tract
     <algorithm> = store | lzh | bwt | ppm
 
+```
 File names may include the '*' and '?' wildcard characters.
 
 Usage by command:
