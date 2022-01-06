@@ -59,26 +59,26 @@ Usage by command:
 
 * (C)reate archive
 
-  mar [<options>] c <archive> <files>
+  `mar [<options>] c <archive> <files>`
 
   Creates a *new* archive (from scratch) and puts files in it. If the archive
   already existed before the (C)reate action, it is destroyed.
 
   Useful options are:
 
-  - "-a <algorithm>" (store/lzh/bwt/ppm, default = lzh, store = no compression)
+  - `-a <algorithm>` (store/lzh/bwt/ppm, default = lzh, store = no compression)
 
     Selects the compression algorithm. As a general rule, lzh is better for
     compression speed, and bwt is better for compression ratio; ppm should
     be avoided since it's slow at decompressing and needs *much* memory. If
     you suspect that the file is already in a compressed form, use "-a store".
 
-  - "-g"
+  - `-g`
 
     Turns on huffman blocks grouping for better compression ratio. This affects
     both the lzh and bwt algorithms. This needs additional time.
 
-  - "-o <order>" (1 to 5, default = 3)
+  - `-o <order>` (1 to 5, default = 3)
 
     Selects the PPM order (number of previous bytes that are used for
     prediction). The higher, the better the compression ratio but also the more
@@ -101,7 +101,7 @@ Usage by command:
 
 * (A)dd archive
 
-  mar [<options>] a <archive> <files>
+  `mar [<options>] a <archive> <files>`
 
   Appends files to an *already existing* archive. The file(s) must not be
   already present in the archive. If you want to update (a) files(s), use
@@ -110,14 +110,14 @@ Usage by command:
 
 * (D)elete archive
 
-  mar [<options>] d <archive> [<files>]
+  `mar [<options>] d <archive> [<files>]`
 
   Deletes files from an existing archive. The files don't need to be already
   present in the archive.
 
 * (L)ist archive [<files>]
 
-  mar l <archive>
+  `mar l <archive>`
 
   Displays archive content into standard output. Here are the fields meaning:
 
@@ -132,23 +132,28 @@ Usage by command:
 
 * (T)est archive [<files>]
 
-  mar t <archive>
+  `mar t <archive>`
 
   Decompresses each file in memory, and checks that the decompression is OK
   by comparing the CRCs. Complains only if something goes wrong.
 
 * e(X)tract archive
 
-  mar x <archive> [<files>]
+  `mar x <archive> [<files>]`
 
   Extract the archive files into the current directory. Note that the archive
   is not modified in any way.
 
-Known bugs
-----------
+Note
+-------
+This is the original documentation from when this tool was first created.
+This tool is placed on Github so that the MAr archive format can continue
+to be extracted in the future. 
+  
+Minor tweaks were made to the Makefile for it to compile w/gcc in 2022.
 
-Contact
+Original Author
 -------
 
-Xann / Melting-Pot (xann@melting-pot.org).
+Xann / Melting-Pot (xann [ at ] melting-pot [.] org).
 
